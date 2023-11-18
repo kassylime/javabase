@@ -26,6 +26,19 @@ class Bread extends Food{
 public class Example02 {
 
 	public static void main(String[] args) {
+		// 추상 클래스(abstract class)
+				// abstract 키워드가 붙은 메소드는 선언만 하는 것이
+				// 가능합니다.
+				//이런 abstract method를 1개 이상 가지고 있는 클래스는
+				//abstract 클래스라고 부릅니다.
+				//Food f = new Food();
+				//추상 클래스는 자기 자신을 생성하는 것이 불가능합니다.
+				//이유 : 메소드가 구현이 안되어있기 때문
+				//그럼 추상 클래스는 어떻게 써먹느냐?
+				//추상 클래스를 상속받는 자식 클래스 쪽에서 선언만 해둔 메소드에 대한
+				//재정의를 진행하는 것으로, 자식 클래스에서 사용하게 합니다.
+		
+		
 		// abstract class 추상클래스
 		// abstract 키워드가 붙은 메소드는 선언만 하는 것이 가능
 		// abstract method를 1개 이상 가지고 있는 클래스를 abstract 클래스라고 부른다.
