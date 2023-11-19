@@ -18,8 +18,9 @@ public class homework03 {
 			sum += array[i];
 		}
 		Arrays.sort(array);
+		
 		System.out.println(sum/5);
-		System.out.println(array[2]);
+		System.out.println(array[array.length/2]);
 		sc.close();
 	}
 

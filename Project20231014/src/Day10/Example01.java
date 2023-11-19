@@ -20,6 +20,7 @@ interface Animal {
 	public abstract void Sound();
 }
 
+//class 클래스명 implements 인터페이스명
 class Dog implements Animal {
 
 	@Override

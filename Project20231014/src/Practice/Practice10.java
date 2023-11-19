@@ -49,6 +49,13 @@ class StringStack implements Stack {
 		idx--;
 		return stack[idx];
 		
+		/*
+		 * if(idx - 1 < 0) { return null; } 
+		 * idx--; 
+		 * String data = stack[idx]; 
+		 * return data;
+		 */
+		
 	}
 
 	@Override
@@ -57,7 +64,7 @@ class StringStack implements Stack {
 		// 인덱스를 하나 증가
 		// true를 return 그게 아니면 false return
 		
-		if(idx > capacity) {
+		if(idx < capacity) {
 			stack[idx] = value;
 			idx++;
 			return true;
@@ -87,8 +94,10 @@ public class Practice10 {
 		System.out.println("== 스택에 저장되어 있는 모든 문자열에 대한 POP() 진행 ==");
 		System.out.println("작업 문자열 : ");
 		int length = stack.length();		
-		for(int i = 0; i < length; i++) {
-			
+		for(int i = 0 ; i < length; i++)
+		{
+			String pop = stack.pop();
+			System.out.print(pop + " ");
 		}
 		
 		sc.close();

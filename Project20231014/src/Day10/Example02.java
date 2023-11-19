@@ -87,7 +87,7 @@ public class Example02 {
 
 		Scanner sc = new Scanner(System.in);
 		String select = sc.next();
-		Sort sort = null;
+		Sort sort = null;  //인터페이스 선언(선택한 값에 따라 그 형태로 생성)
 		
 		switch (select) {
 		case "B" : 
@@ -104,6 +104,7 @@ public class Example02 {
 		}
 
 		
+		//배열 데이터 집어넣고 기능 출력
 		int[] tester = new int[3];
 		sort.asceding(tester);
 		sort.descending(tester);
