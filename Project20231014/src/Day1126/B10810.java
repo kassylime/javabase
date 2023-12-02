@@ -12,6 +12,7 @@ public class B10810 {
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		// 듸어쓰기 기준으로 여러 개를 입력, 출력하는 클래스
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		
 		int N = Integer.parseInt(st.nextToken()); 
