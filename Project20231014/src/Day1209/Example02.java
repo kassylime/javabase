@@ -20,13 +20,13 @@ class SCV {
 			center.gas += 8;
 			gasObject.gas -= 8;	
 			System.out.println("채집을 진행합니다. (+8)");
-		} else if (gasObject.gas < 1) {
-			//gasObject.gas = 0;
-			throw new ExhaustVespeneGasException("베스핀 가스가 고갈되었습니다.");
 		} else if (gasObject.gas == 0) {
 			center.gas += 1;
 			System.out.println("고갈되어 극 소량의 가스를 채쥐하였습니다. (+1)");
-		}
+		} else if (gasObject.gas < 1) {
+			//gasObject.gas = 0;
+			throw new ExhaustVespeneGasException("베스핀 가스가 고갈되었습니다.");
+		} 
 	}
 }
 
