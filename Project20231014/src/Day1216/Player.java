@@ -8,6 +8,7 @@ public class Player extends Unit implements GameAction {
 	public Player(String name, int melee, int energy, double m_hit, double e_hit, int hp) {
 		this.name = name;
 		this.melee = melee;
+		this.energy = energy;
 		this.m_hit = m_hit;
 		this.e_hit = e_hit;
 		this.hp = hp;
@@ -16,18 +17,25 @@ public class Player extends Unit implements GameAction {
 	@Override
 	public double Melee_Attack() {
 		// TODO Auto-generated method stub
-		return 0;
+		return melee * m_hit;
 	}
 
 	@Override
 	public double Energy_Attack() {
 		// TODO Auto-generated method stub
-		return 0;
+		return energy * e_hit;
 	}
 
 	@Override
 	public boolean setDamate(double dmg) {
-		// TODO Auto-generated method stub
-		return false;
+		if(hp > dmg) {
+			hp -= dmg;
+			System.out.printf("%s의 남는 체력 : %d%n", name, hp);
+			return false;
+		} else {
+			System.out.printf("%s가 스려졌다!%n", name);
+			return true;
+		}
+		
 	}
 }

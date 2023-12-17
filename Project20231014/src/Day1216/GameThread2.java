@@ -24,9 +24,15 @@ public class GameThread2 extends Thread {
 				attack_rate = (int)(Math.random() * 2);
 				
 				switch(attack_rate) {
-				case 0 : end = other.setDamate(player.Melee_Attack());
+				case 0 : 
+					System.out.printf("%s에게 %s%.1f%s만큼의 데미지를 주었습니다.(Melee)%n", 
+							player.name,  "\u001B[37m", other.Melee_Attack(), "\u001B[0m");
+					end = player.setDamate(other.Melee_Attack());
 					break;
-				case 1 :  end = other.setDamate(player.Energy_Attack());
+				case 1 :  
+					System.out.printf("%s에게 %s만큼의 데미지를 주었습니다.(Melee)%n", 
+							player.name, FontColor.ColorConsole(FontColor.ANSI_RED, other.Melee_Attack()));
+					end = player.setDamate(other.Energy_Attack());
 					break;
 				}
 				

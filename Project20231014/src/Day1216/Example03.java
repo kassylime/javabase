@@ -16,8 +16,8 @@ public class Example03 {
 		String input_data1 = sc.next();
 		System.out.print("상대방 캐릭터의 이름을 입력해주세요 >> ");
 		String input_data2 = sc.next();
-		Player player = new Player(input_data1, 5, 1, 0.5, 0.5, 500);
-		Player other = new Player(input_data2, 5, 1, 0.5, 0.5, 300);
+		Player player = new Player(input_data1, 5, 1, 0.5, 0.5, 50);
+		Player other = new Player(input_data2, 5, 1, 0.5, 0.5, 30);
 		ThreadSetting(player, other);
 		sc.close();
 	}
